@@ -19,5 +19,12 @@
     "title": "Serving markdown from a static GitHub Pages site",
     "date": "2026-08-02",
     "excerpt": "GitHub Pages has no server to run, so \"serving markdown\" means shipping the .md files as static assets and rendering them in the browser."
+  },
+  {
+    "slug": "new",
+    "file": "../content/notes/new.md",
+    "title": "New",
+    "date": "2026-09-02",
+    "excerpt": "Excerpt"
   }
 ]
