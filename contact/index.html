@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact — drafting.desk</title>
+<meta name="description" content="Get in touch.">
+<link rel="canonical" href="https://your-username.github.io/your-repo/contact/">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="drafting.desk">
+<meta property="og:title" content="Contact — drafting.desk">
+<meta property="og:description" content="Get in touch by email or find me elsewhere.">
+<meta property="og:url" content="https://your-username.github.io/your-repo/contact/">
+<meta property="og:image" content="https://picsum.photos/id/60/1200/630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Contact — drafting.desk">
+<meta name="twitter:description" content="Get in touch by email or find me elsewhere.">
+<meta name="twitter:image" content="https://picsum.photos/id/60/1200/630">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  "url": "https://your-username.github.io/your-repo/contact/",
+  "about": {
+    "@type": "Person",
+    "name": "Alex Ward",
+    "email": "hello@example.com",
+    "sameAs": [
+      "https://github.com/",
+      "https://www.linkedin.com/"
+    ]
+  }
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+
+<script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          ink: '#16324F',
+          'ink-light': '#21496F',
+          'ink-text': '#EFE9DA',
+          muted: '#9FB2C4',
+          vellum: '#ECE6D6',
+          'vellum-dim': '#E1D9C4',
+          'paper-text': '#1B3348',
+          'muted-2': '#5E6E63',
+          gold: '#E3A93F',
+          rust: '#C1502E',
+        },
+        fontFamily: {
+          serif: ['Fraunces', 'serif'],
+          sans: ['"IBM Plex Sans"', 'sans-serif'],
+        },
+      },
+    },
+  };
+</script>
+</head>
+<body data-page="contact" class="bg-ink text-ink-text font-sans antialiased">
+
+<header class="border-b border-white/10">
+  <div class="max-w-[1080px] mx-auto px-7 py-5 flex items-center justify-between gap-5 flex-wrap">
+    <a href="../" class="font-serif text-xl">drafting<span class="text-gold">.</span>desk</a>
+    <nav class="site-nav">
+      <ul class="flex gap-6 text-sm">
+        <li><a href="../" data-page="home" class="pb-1 border-b border-transparent text-muted hover:text-ink-text hover:border-gold transition-colors">Home</a></li>
+        <li><a href="../about/" data-page="about" class="pb-1 border-b border-transparent text-muted hover:text-ink-text hover:border-gold transition-colors">About</a></li>
+        <li><a href="../work/" data-page="work" class="pb-1 border-b border-transparent text-muted hover:text-ink-text hover:border-gold transition-colors">Work</a></li>
+        <li><a href="../notes/" data-page="notes" class="pb-1 border-b border-transparent text-muted hover:text-ink-text hover:border-gold transition-colors">Notes</a></li>
+        <li><a href="../contact/" data-page="contact" class="pb-1 border-b border-transparent text-muted hover:text-ink-text hover:border-gold transition-colors">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section class="bg-vellum text-paper-text py-16">
+  <div class="max-w-[1080px] mx-auto px-7">
+    <div class="max-w-[640px]">
+      <h1 class="font-serif text-3xl mb-3">Get in touch</h1>
+      <p class="text-muted-2 mb-8">Send a message and it'll land straight in my inbox. If you're writing about a project, a line or two on what you're trying to build is more useful than a formal introduction.</p>
+
+      <form id="contact-form" class="space-y-5" novalidate>
+        <!-- Honeypot: hidden from real visitors, often filled in by bots. -->
+        <div class="hidden" aria-hidden="true">
+          <label for="website">Leave this field empty</label>
+          <input id="website" name="website" type="text" tabindex="-1" autocomplete="off">
+        </div>
+
+        <div>
+          <label for="name" class="block text-sm font-medium mb-1">Name</label>
+          <input id="name" name="name" type="text" required
+            class="w-full border border-ink/25 bg-vellum px-3 py-2 text-paper-text placeholder:text-muted-2 focus:outline-none focus:border-rust">
+        </div>
+
+        <div>
+          <label for="email" class="block text-sm font-medium mb-1">Email</label>
+          <input id="email" name="email" type="email" required
+            class="w-full border border-ink/25 bg-vellum px-3 py-2 text-paper-text placeholder:text-muted-2 focus:outline-none focus:border-rust">
+        </div>
+
+        <div>
+          <label for="message" class="block text-sm font-medium mb-1">Message</label>
+          <textarea id="message" name="message" rows="5" required
+            class="w-full border border-ink/25 bg-vellum px-3 py-2 text-paper-text placeholder:text-muted-2 focus:outline-none focus:border-rust"></textarea>
+        </div>
+
+        <button type="submit" id="contact-submit"
+          class="inline-block border border-rust text-rust px-5 py-2.5 text-sm hover:bg-rust hover:text-vellum transition-colors disabled:opacity-50 disabled:cursor-not-allowed">
+          Send message
+        </button>
+
+        <p id="contact-status" class="text-sm min-h-[1.25em]" role="status" aria-live="polite"></p>
+      </form>
+
+      <div class="mt-10 pt-8 border-t border-ink/15 text-sm text-muted-2">
+        <p>Prefer email? Reach me directly at <a href="mailto:hello@example.com" class="text-rust hover:underline">hello@example.com</a>, or find me on
+          <a href="https://github.com/" class="text-rust hover:underline">GitHub</a> and
+          <a href="https://www.linkedin.com/" class="text-rust hover:underline">LinkedIn</a>.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="py-10">
+  <div class="max-w-[1080px] mx-auto px-7 flex justify-between flex-wrap gap-4 text-sm text-muted">
+    <span>© 2026 — built and deployed as a static site.</span>
+    <a href="../contact/" class="hover:text-ink-text">Get in touch</a>
+  </div>
+</footer>
+
+<script src="../assets/main.js"></script>
+</body>
+</html>

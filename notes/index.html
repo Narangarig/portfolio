@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Notes — drafting.desk</title>
+<meta name="description" content="Short write-ups, rendered from markdown.">
+<link rel="canonical" href="https://your-username.github.io/your-repo/notes/">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="drafting.desk">
+<meta property="og:title" content="Notes — drafting.desk">
+<meta property="og:description" content="Short write-ups on building and shipping small software, kept from getting long.">
+<meta property="og:url" content="https://your-username.github.io/your-repo/notes/">
+<meta property="og:image" content="https://picsum.photos/id/60/1200/630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Notes — drafting.desk">
+<meta name="twitter:description" content="Short write-ups on building and shipping small software.">
+<meta name="twitter:image" content="https://picsum.photos/id/60/1200/630">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "name": "drafting.desk notes",
+  "url": "https://your-username.github.io/your-repo/notes/",
+  "blogPost": [
+    {
+      "@type": "BlogPosting",
+      "headline": "Serving markdown from a static GitHub Pages site",
+      "datePublished": "2026-08-02",
+      "description": "GitHub Pages has no server to run, so \"serving markdown\" means shipping the .md files as static assets and rendering them in the browser.",
+      "url": "https://your-username.github.io/your-repo/notes/?post=serving-markdown-on-github-pages"
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "Ship the narrow version first",
+      "datePublished": "2026-06-14",
+      "description": "A smaller thing that's finished beats a bigger thing that's almost there.",
+      "url": "https://your-username.github.io/your-repo/notes/?post=shipping-narrow"
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "Why I default to static hosting",
+      "datePublished": "2026-04-28",
+      "description": "For a solo builder, the best server is often the one you don't have to run, patch, or pay for while it sits idle.",
+      "url": "https://your-username.github.io/your-repo/notes/?post=why-static"
+    }
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+
+<script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          ink: '#16324F',
+          'ink-light': '#21496F',
+          'ink-text': '#EFE9DA',
+          muted: '#9FB2C4',
+          vellum: '#ECE6D6',
+          'vellum-dim': '#E1D9C4',
+          'paper-text': '#1B3348',
+          'muted-2': '#5E6E63',
+          gold: '#E3A93F',
+          rust: '#C1502E',
+        },
+        fontFamily: {
+          serif: ['Fraunces', 'serif'],
+          sans: ['"IBM Plex Sans"', 'sans-serif'],
+        },
+      },
+    },
+  };
+</script>
+</head>
+<body data-page="notes" class="bg-ink text-ink-text font-sans antialiased">
+
+<header class="border-b border-white/10">
+  <div class="max-w-[1080px] mx-auto px-7 py-5 flex items-center justify-between gap-5 flex-wrap">
+    <a href="../" class="font-serif text-xl">drafting<span class="text-gold">.</span>desk</a>
+    <nav class="site-nav">
+      <ul class="flex gap-6 text-sm">
+        <li><a href="../" data-page="home" class="pb-1 border-b border-transparent text-muted hover:text-ink-text hover:border-gold transition-colors">Home</a></li>
+        <li><a href="../about/" data-page="about" class="pb-1 border-b border-transparent text-muted hover:text-ink-text hover:border-gold transition-colors">About</a></li>
+        <li><a href="../work/" data-page="work" class="pb-1 border-b border-transparent text-muted hover:text-ink-text hover:border-gold transition-colors">Work</a></li>
+        <li><a href="../notes/" data-page="notes" class="pb-1 border-b border-transparent text-muted hover:text-ink-text hover:border-gold transition-colors">Notes</a></li>
+        <li><a href="../contact/" data-page="contact" class="pb-1 border-b border-transparent text-muted hover:text-ink-text hover:border-gold transition-colors">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section class="py-14">
+  <div class="max-w-[1080px] mx-auto px-7">
+    <div id="notes-list-view">
+      <div class="flex justify-between items-baseline flex-wrap gap-4 mb-8">
+        <h2 class="font-serif text-2xl">Notes</h2>
+        <span class="text-muted text-sm">Short write-ups, kept from getting long</span>
+      </div>
+      <div id="notes-list">
+        <p class="text-muted">Loading…</p>
+      </div>
+    </div>
+
+    <div id="notes-post-view" class="hidden max-w-[68ch]">
+      <a href="./" class="inline-block mb-6 text-muted hover:text-ink-text">&larr; All notes</a>
+      <div id="post-content" class="prose prose-invert max-w-none prose-headings:font-serif prose-a:text-gold prose-code:text-ink-text prose-strong:text-ink-text">
+        <p class="text-muted">Loading…</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="py-10">
+  <div class="max-w-[1080px] mx-auto px-7 flex justify-between flex-wrap gap-4 text-sm text-muted">
+    <span>© 2026 — built and deployed as a static site.</span>
+    <a href="../contact/" class="hover:text-ink-text">Get in touch</a>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/marked/12.0.2/marked.min.js"></script>
+<script src="../assets/main.js"></script>
+<script>
+(async function () {
+  const params = new URLSearchParams(location.search);
+  const slug = params.get("post");
+  const listView = document.getElementById("notes-list-view");
+  const postView = document.getElementById("notes-post-view");
+
+  const res = await fetch("../content/notes/manifest.json");
+  const manifest = await res.json();
+
+  if (slug) {
+    const entry = manifest.find((n) => n.slug === slug);
+    listView.classList.add("hidden");
+    postView.classList.remove("hidden");
+    const target = document.getElementById("post-content");
+    if (!entry) {
+      target.innerHTML = '<p class="text-rust">No note found with that name.</p>';
+      return;
+    }
+    document.title = entry.title + " — drafting.desk";
+    await renderMarkdownInto(entry.file, target);
+    target.insertAdjacentHTML(
+      "afterbegin",
+      `<h1 class="font-serif">${entry.title}</h1><div class="text-muted text-sm not-prose mb-6">${entry.date}</div>`
+    );
+  } else {
+    const list = document.getElementById("notes-list");
+    const sorted = [...manifest].sort((a, b) => (a.date < b.date ? 1 : -1));
+    list.innerHTML = sorted
+      .map(
+        (n) => `
+      <div class="grid md:grid-cols-[130px_1fr] gap-2 md:gap-6 py-5 border-b border-white/10 last:border-b-0">
+        <time class="text-muted text-sm">${n.date}</time>
+        <div>
+          <h3 class="font-serif text-lg mb-1.5"><a href="?post=${n.slug}" class="hover:text-gold">${n.title}</a></h3>
+          <p class="text-muted text-sm">${n.excerpt}</p>
+        </div>
+      </div>`
+      )
+      .join("");
+  }
+})();
+</script>
+</body>
+</html>

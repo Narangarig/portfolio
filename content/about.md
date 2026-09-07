@@ -19,4 +19,4 @@ I care about:
 
 ## Say hello
 
-If something here is useful to you, or you think I've got something wrong, the [contact page](contact.html) is the fastest way to reach me.
+If something here is useful to you, or you think I've got something wrong, the [contact page](../contact/) is the fastest way to reach me.

@@ -1,21 +1,21 @@
 [
   {
     "slug": "why-static",
-    "file": "content/notes/why-static.md",
+    "file": "../content/notes/why-static.md",
     "title": "Why I default to static hosting",
     "date": "2026-04-28",
     "excerpt": "For a solo builder, the best server is often the one you don't have to run, patch, or pay for while it sits idle."
   },
   {
     "slug": "shipping-narrow",
-    "file": "content/notes/shipping-narrow.md",
+    "file": "../content/notes/shipping-narrow.md",
     "title": "Ship the narrow version first",
     "date": "2026-06-14",
     "excerpt": "A smaller thing that's finished beats a bigger thing that's almost there — most of what I build starts by cutting scope, not adding it."
   },
   {
     "slug": "serving-markdown-on-github-pages",
-    "file": "content/notes/serving-markdown-on-github-pages.md",
+    "file": "../content/notes/serving-markdown-on-github-pages.md",
     "title": "Serving markdown from a static GitHub Pages site",
     "date": "2026-08-02",
     "excerpt": "GitHub Pages has no server to run, so \"serving markdown\" means shipping the .md files as static assets and rendering them in the browser."

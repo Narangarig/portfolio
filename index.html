@@ -5,89 +5,149 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Alex Ward — Builder</title>
 <meta name="description" content="Independent developer building small, static-first web projects.">
+<link rel="canonical" href="https://your-username.github.io/your-repo/">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="drafting.desk">
+<meta property="og:title" content="drafting.desk — Alex Ward, independent developer">
+<meta property="og:description" content="Independent developer building small, static-first web and AI projects — mostly solo, mostly finished quickly.">
+<meta property="og:url" content="https://your-username.github.io/your-repo/">
+<meta property="og:image" content="https://picsum.photos/id/60/1200/630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="drafting.desk — Alex Ward, independent developer">
+<meta name="twitter:description" content="Independent developer building small, static-first web and AI projects.">
+<meta name="twitter:image" content="https://picsum.photos/id/60/1200/630">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://your-username.github.io/your-repo/#website",
+      "url": "https://your-username.github.io/your-repo/",
+      "name": "drafting.desk",
+      "description": "Independent developer building small, static-first web and AI projects.",
+      "inLanguage": "en"
+    },
+    {
+      "@type": "Person",
+      "@id": "https://your-username.github.io/your-repo/#person",
+      "name": "Alex Ward",
+      "url": "https://your-username.github.io/your-repo/",
+      "jobTitle": "Independent developer",
+      "description": "Builds small, static-first web apps, AI retrieval systems, and content sites."
+    }
+  ]
+}
+</script>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/style.css">
-</head>
-<body>
 
-<header class="site-header">
-  <div class="wrap">
-    <a class="mark" href="index.html">drafting<span>.</span>desk</a>
+<script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          ink: '#16324F',
+          'ink-light': '#21496F',
+          'ink-text': '#EFE9DA',
+          muted: '#9FB2C4',
+          vellum: '#ECE6D6',
+          'vellum-dim': '#E1D9C4',
+          'paper-text': '#1B3348',
+          'muted-2': '#5E6E63',
+          gold: '#E3A93F',
+          rust: '#C1502E',
+        },
+        fontFamily: {
+          serif: ['Fraunces', 'serif'],
+          sans: ['"IBM Plex Sans"', 'sans-serif'],
+        },
+      },
+    },
+  };
+</script>
+</head>
+<body data-page="home" class="bg-ink text-ink-text font-sans antialiased">
+
+<header class="border-b border-white/10">
+  <div class="max-w-[1080px] mx-auto px-7 py-5 flex items-center justify-between gap-5 flex-wrap">
+    <a href="./" class="font-serif text-xl">drafting<span class="text-gold">.</span>desk</a>
     <nav class="site-nav">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="work.html">Work</a></li>
-        <li><a href="notes.html">Notes</a></li>
-        <li><a href="contact.html">Contact</a></li>
+      <ul class="flex gap-6 text-sm">
+        <li><a href="./" data-page="home" class="pb-1 border-b border-transparent text-muted hover:text-ink-text hover:border-gold transition-colors">Home</a></li>
+        <li><a href="about/" data-page="about" class="pb-1 border-b border-transparent text-muted hover:text-ink-text hover:border-gold transition-colors">About</a></li>
+        <li><a href="work/" data-page="work" class="pb-1 border-b border-transparent text-muted hover:text-ink-text hover:border-gold transition-colors">Work</a></li>
+        <li><a href="notes/" data-page="notes" class="pb-1 border-b border-transparent text-muted hover:text-ink-text hover:border-gold transition-colors">Notes</a></li>
+        <li><a href="contact/" data-page="contact" class="pb-1 border-b border-transparent text-muted hover:text-ink-text hover:border-gold transition-colors">Contact</a></li>
       </ul>
     </nav>
   </div>
 </header>
 
-<section class="hero">
-  <div class="wrap">
-    <div class="hero-copy">
-      <h1>I build small things and finish them.</h1>
-      <p class="lede">Independent developer working on web and AI projects — mostly solo, mostly static, always shipped rather than sketched.</p>
-      <div class="hero-cta">
-        <a class="btn" href="work.html">See the work</a>
-        <a class="btn quiet" href="notes.html">Read the notes</a>
+<section class="border-b border-white/10 py-16 md:py-20">
+  <div class="max-w-[1080px] mx-auto px-7 grid md:grid-cols-[1.15fr_0.85fr] gap-12 md:gap-14 items-center">
+    <div>
+      <h1 class="font-serif text-4xl md:text-5xl leading-tight max-w-[14ch] mb-4">I build small things and finish them.</h1>
+      <p class="text-muted text-lg max-w-[46ch] mb-7">Independent developer working on web and AI projects — mostly solo, mostly static, always shipped rather than sketched.</p>
+      <div class="flex gap-4 flex-wrap">
+        <a href="work/" class="inline-block border border-gold px-5 py-2.5 text-sm hover:bg-gold hover:text-ink transition-colors">See the work</a>
+        <a href="notes/" class="inline-block border border-white/15 px-5 py-2.5 text-sm text-muted hover:text-ink-text hover:border-white/40 transition-colors">Read the notes</a>
       </div>
     </div>
-    <div class="hero-photo">
-      <figure>
-        <img src="https://picsum.photos/id/60/900/700" alt="A cluttered desk with a laptop, notebook, and coffee — a working developer's setup.">
-        <figcaption>Where most of this gets built.</figcaption>
-      </figure>
+    <figure class="order-first md:order-last">
+      <img src="https://picsum.photos/id/60/900/700" alt="A cluttered desk with a laptop, notebook, and coffee — a working developer's setup." class="border border-white/10 -rotate-1 [filter:grayscale(15%)_contrast(1.02)]">
+      <figcaption class="text-xs text-muted mt-2 -rotate-1">Where most of this gets built.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="border-b border-white/10 py-14">
+  <div class="max-w-[1080px] mx-auto px-7">
+    <div class="flex justify-between items-baseline flex-wrap gap-4 mb-8">
+      <h2 class="font-serif text-2xl">What I build</h2>
+      <span class="text-muted text-sm">Three kinds of project, most weeks</span>
+    </div>
+    <div class="grid md:grid-cols-3 gap-px bg-white/10 border border-white/10">
+      <div class="bg-ink p-6">
+        <span class="block text-gold text-xs mb-3">Web apps</span>
+        <h3 class="font-serif text-lg mb-2">Marketplaces &amp; small platforms</h3>
+        <p class="text-muted text-sm">Listings, search, and the unglamorous plumbing underneath — built to run without a team behind them.</p>
+      </div>
+      <div class="bg-ink p-6">
+        <span class="block text-gold text-xs mb-3">AI systems</span>
+        <h3 class="font-serif text-lg mb-2">Retrieval &amp; assistants</h3>
+        <p class="text-muted text-sm">Knowledge bases and support pipelines that need to be accurate more than they need to be clever.</p>
+      </div>
+      <div class="bg-ink p-6">
+        <span class="block text-gold text-xs mb-3">Content sites</span>
+        <h3 class="font-serif text-lg mb-2">Static, fast, low-maintenance</h3>
+        <p class="text-muted text-sm">Sites like this one — markdown in, a static host out, nothing left running that needs watching.</p>
+      </div>
     </div>
   </div>
 </section>
 
-<section class="block">
-  <div class="wrap">
-    <div class="section-head">
-      <h2>What I build</h2>
-      <span class="count">Three kinds of project, most weeks</span>
+<section class="bg-vellum text-paper-text py-14">
+  <div class="max-w-[1080px] mx-auto px-7">
+    <div class="flex justify-between items-baseline flex-wrap gap-4 mb-8">
+      <h2 class="font-serif text-2xl">Latest note</h2>
+      <a href="notes/" class="text-rust hover:underline">All notes</a>
     </div>
-    <div class="grid">
-      <div class="card">
-        <span class="tag">Web apps</span>
-        <h3>Marketplaces &amp; small platforms</h3>
-        <p>Listings, search, and the unglamorous plumbing underneath — built to run without a team behind them.</p>
-      </div>
-      <div class="card">
-        <span class="tag">AI systems</span>
-        <h3>Retrieval &amp; assistants</h3>
-        <p>Knowledge bases and support pipelines that need to be accurate more than they need to be clever.</p>
-      </div>
-      <div class="card">
-        <span class="tag">Content sites</span>
-        <h3>Static, fast, low-maintenance</h3>
-        <p>Sites like this one — markdown in, a static host out, nothing left running that needs watching.</p>
-      </div>
+    <div class="border border-ink/15 p-6">
+      <h3 class="font-serif text-lg mb-2"><a href="notes/?post=serving-markdown-on-github-pages" class="text-rust hover:underline">Serving markdown from a static GitHub Pages site</a></h3>
+      <p class="text-muted-2 text-sm">GitHub Pages has no server to run, so "serving markdown" means shipping the .md files as static assets and rendering them in the browser.</p>
     </div>
   </div>
 </section>
 
-<section class="block vellum">
-  <div class="wrap">
-    <div class="section-head">
-      <h2>Latest note</h2>
-      <a href="notes.html">All notes</a>
-    </div>
-    <div class="paper-card">
-      <h3><a href="notes.html?post=serving-markdown-on-github-pages">Serving markdown from a static GitHub Pages site</a></h3>
-      <p class="muted">GitHub Pages has no server to run, so "serving markdown" means shipping the .md files as static assets and rendering them in the browser.</p>
-    </div>
-  </div>
-</section>
-
-<footer class="site-footer">
-  <div class="wrap">
+<footer class="py-10">
+  <div class="max-w-[1080px] mx-auto px-7 flex justify-between flex-wrap gap-4 text-sm text-muted">
     <span>© 2026 — built and deployed as a static site.</span>
-    <span><a href="contact.html">Get in touch</a></span>
+    <a href="contact/" class="hover:text-ink-text">Get in touch</a>
   </div>
 </footer>
 

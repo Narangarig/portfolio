@@ -1,0 +1,23 @@
+# drafting.desk
+
+> Independent developer building small, static-first web and AI projects — mostly solo, mostly finished quickly.
+
+This is a personal site for an independent developer. It covers what they build, how they work, and short write-ups on shipping small software projects.
+
+## Pages
+
+- [Home](https://your-username.github.io/your-repo/): Introduction and an overview of current project areas (web apps, AI/retrieval systems, static content sites).
+- [About](https://your-username.github.io/your-repo/about/): How the author works, what they prioritize (clarity, low-maintenance systems, static hosting where possible), and the tools they default to.
+- [Work](https://your-username.github.io/your-repo/work/): A list of projects — a vehicle marketplace, a classifieds marketplace, retrieval-augmented AI support pipelines, a destination travel site, and a chat interface.
+- [Notes](https://your-username.github.io/your-repo/notes/): Short write-ups on building and shipping small software. Individual posts are markdown files under /content/notes/ (see below).
+- [Contact](https://your-username.github.io/your-repo/contact/): Email and social links.
+
+## Notes (source markdown)
+
+- [Why I default to static hosting](https://your-username.github.io/your-repo/content/notes/why-static.md)
+- [Ship the narrow version first](https://your-username.github.io/your-repo/content/notes/shipping-narrow.md)
+- [Serving markdown from a static GitHub Pages site](https://your-username.github.io/your-repo/content/notes/serving-markdown-on-github-pages.md)
+
+## Notes for automated readers
+
+The About and Notes pages render their body content client-side from the markdown files listed above. The linked .md files under /content/ contain the full text directly and are the most reliable way to read this site's writing without executing JavaScript.
